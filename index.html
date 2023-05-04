@@ -11,250 +11,41 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
 
     <title>NICEFILM - Watch now!</title>
 </head>
-<style>
-    * {
-        margin: 0;
-        text-decoration: none;
-        background-color: rgba(255, 255, 255, 0);
-        color: white;
-    }
-
-    h1{
-        font-family: 'Bebas Neue', cursive;
-        font-size: 50px; 
-    }
-
-    body {
-        background-color: black;
-    }
-
-    #mainMenu {
-        min-width: 700px;
-        background-color: rgba(255, 255, 255, 0);
-        margin: 0.5% 0px 0px 210px;
-        position: absolute;
-        float: left;
-    }
-
-    #mainMenu li {
-        display: inline-block;
-        font-family: 'Sigmar', cursive;
-        font-size: 20px;
-        padding: 10px 0px 0px 0px;
-        margin: 15px 0vw 0vw 0vw;
-        width: 140px;
-    }
-
-
-    li a:hover {
-        color: yellow;
-        font-weight: bolder;
-    }
-
-    #active {
-        color: yellow;
-        margin-left: 30px;
-    }
-
-    #siteLogo {
-        position: absolute;
-        width: 200px;
-        margin: 10px 0vw 0vw 35px;
-    }
-
-    .subnav-content {
-        font-family: 'Sigmar', cursive;
-        display: grid;
-        position: absolute;
-        font-size: 15px;
-        padding-left: 200px;
-
-    }
-
-    .subnav-content a:hover {
-        color: yellow;
-        font-weight: bolder;
-
-    }
-
-    .genders a:hover {
-        color: red;
-    }
-
-    .genders a:hover+.subnav-content {
-        display: contents;
-        color: white;
-
-    }
-
-    #trailerMovie {
-        margin-top: -6vw;
-        height: 80%;
-        min-width: 100%;
-        min-height: 100%;
-        z-index: 0;
-        background-color: black;
-        margin-bottom: -80px;
-        z-index: 1;
-    }
-
-    .videoInfo {
-        font-family: 'Bebas Neue', cursive;
-        font-size: 20px;
-        margin: -20% 0 0 5%;
-        background-color: rgb(0, 0, 0);
-        color: #000000;
-        width: 80%;
-        padding: 20px;
-        background-color: black;
-
-    }
-
-    .videoInfo p {
-        width: 60%;
-        font-size: 20px;
-        padding-left: 7px;
-        background-color: rgb(0, 0, 0);
-    }
-
-    #pauseButton {
-        margin-top: 20px;
-        margin-bottom: 7%;
-        width: 50px;
-        height: 50px;
-        font-size: 25px;
-        padding: 5px 10px 10px 10px;
-        border: none;
-        border-radius: 50px;
-        background: yellow;
-        color: black;
-        cursor: pointer;
-    }
-
-    #pauseButton:hover {
-        background-color: white;
-    }
-
-    #watchNow {
-        width: 250px;
-        height: 50px;
-        font-size: 25px;
-        padding: 5px 10px 10px 10px;
-        border: none;
-        border-radius: 50px;
-        background: yellow;
-        color: black;
-        cursor: pointer;
-        margin-left: 0.3%;
-        z-index: 4;
-    }
-
-    #watchNow:hover {
-        float: left;
-        background-color: white;
-    }
-
-    #margem-degrade {
-        position: relative;
-        background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0)10%, rgb(0, 0, 0) 70%);
-        width: 100%;
-        height: 200px;
-        float: left;
-        z-index: 2;
-        margin: -5% 0 0 0;
-
-    }
-
-    .sessao-de-itens h1 {
-        font-family: 'Bebas Neue', cursive;
-        font-size: 50px;
-        padding-left: 2%;
-        z-index: 3;
-    }
-
-    .sessao-de-itens {
-        float: left;
-        width: 98%;
-        height: 23.0vw;
-
-    }
-
-    .container-de-capas {
-        padding: 0 0 30px 2%;
-        float: left;
-        width: 100%;
-    }
-
-    .filme img {
-        float: left;
-        height: 50%;
-        width: 12%;
-        padding: 0;
-
-    }
-
-    .filme a img:hover {
-        width: 13%;
-        border: 3px solid yellow;
-        border-radius: 5px;
-    }
-
-    @media only screen and (max-width: 1500px) {
-        #margem-degrade {
-            display: none;
-        }
-    }
-
-    #bottomLogo{
-        float: left;
-        width:550px;
-        padding: 10px 20px 20px 2%;
-    }
-
-    .bottomMenu{
-        font-family: 'Bebas Neue', cursive;
-        display: block;
-        float: left;
-        font-size: 15px;
-        margin-left: -1%;
-        padding-bottom: 2%;
-
-    }
-
-    
-</style>
 
 <body>
     <!--Header-->
-    <div id="header">
+    <div>
+        <a href="index.html">
+            <img src="./img/niceLogo.png" id="siteLogo" alt="Logo do Site NICEFILM | Movies & Series">
+        </a>
+
         <div>
-            <a href="index.html">
-                <img src="./img/niceLogo.png" id="siteLogo" alt="Logo do Site NICEFILM | Movies & Series">
-            </a>
-        </div>
-        <div>
-            <nav id="mainMenu">
-                <ul>
-                    <li><a href="" id="active">Home</a></li>
-                    <li class="genders"><a href="">Gêneros ⏷︎</a></li>
-                    <div class="subnav-content">
-                        <a href="#acao">Ação</a>
-                        <a href="#terror">Terror</a>
-                        <a href="#suspense">Suspense</a>
-                        <a href="#comedia">Comédia</a>
-                        <a href="#drama">Drama</a>
-                    </div>
-                    <li><a href="index.html#populares">Top Filmes</a></li>
+            <nav>
+                <ul class="menu">
+                    <li><a href="./index.html">Home</a></li>
+                    <li id="genres"><a href="*">Gêneros</a>
+                        <ul id="submenu">
+                            <li><a href="#acao">Ação</a></li>
+                            <li><a href="#terror">Terror</a></li>
+                            <li><a href="#suspense">Suspense</a></li>
+                            <li><a href="#comedia">Comédia</a></li>
+                            <li><a href="#drama">Drama</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#filmes">Top Filmes</a></li>
                     <li><a href="#series">Top Séries</a></li>
-                    <li><a href="">Minha Conta</a></li>
+                    <li><a href="*">Minha Conta</a></li>
                 </ul>
             </nav>
         </div>
+
     </div>
+
     <div>
         <!--BG Video-->
         <video autoplay muted loop loop mute id="trailerMovie">
@@ -267,170 +58,172 @@
     <div class="videoInfo">
         <h1>Stranger Things</h1>
         <p>
-            Stranger Things se passa na cidade rural fictícia de Hawkins, Indiana. 
-            Como fachada, o laboratório da região realizava experimentos científicos para o Departamento de Energia Americano, 
-            quando na realidade, os pesquisadores ali investiram em experimentos com o paranormal e o sobrenatural, incluindo o 
-            uso de cobaias humanas. 
+            Stranger Things se passa na cidade rural fictícia de Hawkins, Indiana.
+            Como fachada, o laboratório da região realizava experimentos científicos para o Departamento de Energia
+            Americano,
+            quando na realidade, os pesquisadores ali investiram em experimentos com o paranormal e o sobrenatural,
+            incluindo o
+            uso de cobaias humanas.
         </p>
 
         <!-- Use a button to pause/play the video with JavaScript -->
         <button id="pauseButton" onclick="pausePlay()">⏸︎</button>
-        <button id="watchNow"><a href="index.html"></a>⏵︎ Assistir agora </button>
+        <button id="watchNow"><a href="index.html"></a>⏵︎ Assistir agora</button>
     </div>
 
-    <div id="margem-degrade"></div>
-
-    <div class="sessao-de-itens">
-        <h1 id="populares">Filmes Populares</h1>
-        <div class="container-de-capas">
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/D&D.jpg" alt="Capa do filme Dungeons & Dragons"></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/euacredito.jpg" alt="Capa do filme Eu Acredito"></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/guliver.jpg" alt=""></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/infiltrado.jpg" alt=""></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/ondasdafe.jpg" alt=""></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/profecia.jpg" alt=""></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/terrifier2.jpg" alt=""></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/veneza.jpg" alt=""></a></div>
+    <div id="estrutura">
+        <div class="sessao-de-itens">
+            <h1 id="populares">Filmes Populares</h1>
+            <div class="container-de-capas">
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/Filmes Populares/D&D.jpg" alt="Capa do filme Dungeons & Dragons"></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/Filmes Populares/euacredito.jpg" alt="Capa do filme Eu Acredito"></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/Filmes Populares/guliver.jpg" alt=""></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/Filmes Populares/infiltrado.jpg" alt=""></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/Filmes Populares/ondasdafe.jpg" alt=""></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/Filmes Populares/profecia.jpg" alt=""></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/Filmes Populares/terrifier2.jpg" alt=""></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/Filmes Populares/veneza.jpg" alt=""></a></div>
+            </div>
         </div>
-    </div>
 
-    <div class="sessao-de-itens">
-        <h1 id="series">Séries Populares</h1>
-        <div class="container-de-capas">
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/D&D.jpg" alt="Capa do filme Dungeons & Dragons"></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/euacredito.jpg" alt="Capa do filme Eu Acredito"></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/guliver.jpg" alt=""></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/infiltrado.jpg" alt=""></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/ondasdafe.jpg" alt=""></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/profecia.jpg" alt=""></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/terrifier2.jpg" alt=""></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/veneza.jpg" alt=""></a></div>
+        <div class="sessao-de-itens">
+            <h1 id="series">Séries Populares</h1>
+            <div class="container-de-capas">
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/D&D.jpg" alt="Capa do filme Dungeons & Dragons"></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/euacredito.jpg" alt="Capa do filme Eu Acredito"></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/guliver.jpg" alt=""></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/infiltrado.jpg" alt=""></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/ondasdafe.jpg" alt=""></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/profecia.jpg" alt=""></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/terrifier2.jpg" alt=""></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/veneza.jpg" alt=""></a></div>
+            </div>
         </div>
-    </div>
 
-    <div class="sessao-de-itens">
-        <h1 id="acao">Ação</h1>
-        <div class="container-de-capas">
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/D&D.jpg" alt="Capa do filme Dungeons & Dragons"></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/euacredito.jpg" alt="Capa do filme Eu Acredito"></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/guliver.jpg" alt=""></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/infiltrado.jpg" alt=""></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/ondasdafe.jpg" alt=""></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/profecia.jpg" alt=""></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/terrifier2.jpg" alt=""></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/veneza.jpg" alt=""></a></div>
+        <div class="sessao-de-itens">
+            <h1 id="acao">Ação</h1>
+            <div class="container-de-capas">
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/D&D.jpg" alt="Capa do filme Dungeons & Dragons"></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/euacredito.jpg" alt="Capa do filme Eu Acredito"></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/guliver.jpg" alt=""></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/infiltrado.jpg" alt=""></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/ondasdafe.jpg" alt=""></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/profecia.jpg" alt=""></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/terrifier2.jpg" alt=""></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/veneza.jpg" alt=""></a></div>
+            </div>
         </div>
-    </div>
 
-    <div class="sessao-de-itens">
-        <h1 id="terror">Terror</h1>
-        <div class="container-de-capas">
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/D&D.jpg" alt="Capa do filme Dungeons & Dragons"></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/euacredito.jpg" alt="Capa do filme Eu Acredito"></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/guliver.jpg" alt=""></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/infiltrado.jpg" alt=""></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/ondasdafe.jpg" alt=""></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/profecia.jpg" alt=""></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/terrifier2.jpg" alt=""></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/veneza.jpg" alt=""></a></div>
+        <div class="sessao-de-itens">
+            <h1 id="terror">Terror</h1>
+            <div class="container-de-capas">
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/D&D.jpg" alt="Capa do filme Dungeons & Dragons"></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/euacredito.jpg" alt="Capa do filme Eu Acredito"></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/guliver.jpg" alt=""></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/infiltrado.jpg" alt=""></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/ondasdafe.jpg" alt=""></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/profecia.jpg" alt=""></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/terrifier2.jpg" alt=""></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/veneza.jpg" alt=""></a></div>
+            </div>
         </div>
-    </div>
 
-    <div class="sessao-de-itens">
-        <h1 id="suspense">Suspense</h1>
-        <div class="container-de-capas">
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/D&D.jpg" alt="Capa do filme Dungeons & Dragons"></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/euacredito.jpg" alt="Capa do filme Eu Acredito"></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/guliver.jpg" alt=""></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/infiltrado.jpg" alt=""></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/ondasdafe.jpg" alt=""></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/profecia.jpg" alt=""></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/terrifier2.jpg" alt=""></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/veneza.jpg" alt=""></a></div>
+        <div class="sessao-de-itens">
+            <h1 id="suspense">Suspense</h1>
+            <div class="container-de-capas">
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/D&D.jpg" alt="Capa do filme Dungeons & Dragons"></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/euacredito.jpg" alt="Capa do filme Eu Acredito"></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/guliver.jpg" alt=""></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/infiltrado.jpg" alt=""></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/ondasdafe.jpg" alt=""></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/profecia.jpg" alt=""></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/terrifier2.jpg" alt=""></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/veneza.jpg" alt=""></a></div>
+            </div>
         </div>
-    </div>
 
-    <div class="sessao-de-itens">
-        <h1 id="comedia">Comédia</h1>
-        <div class="container-de-capas">
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/D&D.jpg" alt="Capa do filme Dungeons & Dragons"></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/euacredito.jpg" alt="Capa do filme Eu Acredito"></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/guliver.jpg" alt=""></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/infiltrado.jpg" alt=""></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/ondasdafe.jpg" alt=""></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/profecia.jpg" alt=""></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/terrifier2.jpg" alt=""></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/veneza.jpg" alt=""></a></div>
+        <div class="sessao-de-itens">
+            <h1 id="comedia">Comédia</h1>
+            <div class="container-de-capas">
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/D&D.jpg" alt="Capa do filme Dungeons & Dragons"></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/euacredito.jpg" alt="Capa do filme Eu Acredito"></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/guliver.jpg" alt=""></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/infiltrado.jpg" alt=""></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/ondasdafe.jpg" alt=""></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/profecia.jpg" alt=""></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/terrifier2.jpg" alt=""></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/veneza.jpg" alt=""></a></div>
+            </div>
         </div>
-    </div>
 
-    <div class="sessao-de-itens">
-        <h1 id="drama">Drama</h1>
-        <div class="container-de-capas">
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/D&D.jpg" alt="Capa do filme Dungeons & Dragons"></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/euacredito.jpg" alt="Capa do filme Eu Acredito"></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/guliver.jpg" alt=""></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/infiltrado.jpg" alt=""></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/ondasdafe.jpg" alt=""></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/profecia.jpg" alt=""></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/terrifier2.jpg" alt=""></a></div>
-            <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                        src="./img/veneza.jpg" alt=""></a></div>
+        <div class="sessao-de-itens">
+            <h1 id="drama">Drama</h1>
+            <div class="container-de-capas">
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/D&D.jpg" alt="Capa do filme Dungeons & Dragons"></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/euacredito.jpg" alt="Capa do filme Eu Acredito"></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/guliver.jpg" alt=""></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/infiltrado.jpg" alt=""></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/ondasdafe.jpg" alt=""></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/profecia.jpg" alt=""></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/terrifier2.jpg" alt=""></a></div>
+                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/veneza.jpg" alt=""></a></div>
+            </div>
         </div>
     </div>
 
@@ -449,6 +242,7 @@
                     <li><a href="#drama">Drama</a></li>
                 </ul>
             </div>
+        </div>
         </div>
     </footer>
     <script>
@@ -471,7 +265,7 @@
 
     </script>
 
-    
+
 
 
 </body>
