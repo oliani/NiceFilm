@@ -18,7 +18,13 @@
 </head>
 
 <body>
-    <!--Header-->
+
+    <!--BG Video-->
+    <video autoplay muted loop muted plays-inline class="back-video">
+        <source src="./midia/StrangerThings5.mp4" type="video/mp4">
+        Esse vídeo não pode ser reproduzido neste navegador.
+    </video>
+
     <div>
         <a href="index.html">
             <img src="./img/niceLogo.png" id="siteLogo" alt="Logo do Site NICEFILM | Movies & Series">
@@ -27,8 +33,8 @@
         <div>
             <nav>
                 <ul class="menu">
-                    <li><a href="./index.html">Home</a></li>
-                    <li id="genres"><a href="*">Gêneros</a>
+                    <li><a id="active" href="./index.html">Home</a></li>
+                    <li id="genres"><a href="*">Gêneros ⏷︎</a>
                         <ul id="submenu">
                             <li><a href="#acao">Ação</a></li>
                             <li><a href="#terror">Terror</a></li>
@@ -37,7 +43,7 @@
                             <li><a href="#drama">Drama</a></li>
                         </ul>
                     </li>
-                    <li><a href="#filmes">Top Filmes</a></li>
+                    <li><a href="#populares">Top Filmes</a></li>
                     <li><a href="#series">Top Séries</a></li>
                     <li><a href="*">Minha Conta</a></li>
                 </ul>
@@ -46,12 +52,8 @@
 
     </div>
 
-    <div>
-        <!--BG Video-->
-        <video autoplay muted loop loop mute id="trailerMovie">
-            <source src="./midia/StrangerThings5.mp4" type="video/mp4">
-            Esse vídeo não pode ser reproduzido neste navegador.
-        </video>
+    <div id="blank">
+        
     </div>
 
     <!--Texto Sobre video-->
@@ -69,9 +71,14 @@
         <!-- Use a button to pause/play the video with JavaScript -->
         <button id="pauseButton" onclick="pausePlay()">⏸︎</button>
         <button id="watchNow"><a href="index.html"></a>⏵︎ Assistir agora</button>
+        <div id="degrade"></div>
     </div>
+    
+
+    
 
     <div id="estrutura">
+        
         <div class="sessao-de-itens">
             <h1 id="populares">Filmes Populares</h1>
             <div class="container-de-capas">
@@ -80,17 +87,17 @@
                 <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
                             src="./img/Filmes Populares/euacredito.jpg" alt="Capa do filme Eu Acredito"></a></div>
                 <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                            src="./img/Filmes Populares/guliver.jpg" alt=""></a></div>
+                            src="./img/Filmes Populares/guliver.jpg" alt="Capa do filme Guliver"></a></div>
                 <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                            src="./img/Filmes Populares/infiltrado.jpg" alt=""></a></div>
+                            src="./img/Filmes Populares/infiltrado.jpg" alt="Capa do filme Infiltrado"></a></div>
                 <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                            src="./img/Filmes Populares/ondasdafe.jpg" alt=""></a></div>
+                            src="./img/Filmes Populares/ondasdafe.jpg" alt="Capa do filme Ondas da Fé"></a></div>
                 <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                            src="./img/Filmes Populares/profecia.jpg" alt=""></a></div>
+                            src="./img/Filmes Populares/profecia.jpg" alt="Capa do filme Profecia"></a></div>
                 <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                            src="./img/Filmes Populares/terrifier2.jpg" alt=""></a></div>
+                            src="./img/Filmes Populares/terrifier2.jpg" alt="Capa do filme Terrifier 2"></a></div>
                 <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                            src="./img/Filmes Populares/veneza.jpg" alt=""></a></div>
+                            src="./img/Filmes Populares/veneza.jpg" alt="Capa do filme Veneza"></a></div>
             </div>
         </div>
 
@@ -98,21 +105,21 @@
             <h1 id="series">Séries Populares</h1>
             <div class="container-de-capas">
                 <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                            src="./img/D&D.jpg" alt="Capa do filme Dungeons & Dragons"></a></div>
+                            src="./img/Series Populares/Dahmer.jpg" alt="Capa das Série Dahmer"></a></div>
                 <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                            src="./img/euacredito.jpg" alt="Capa do filme Eu Acredito"></a></div>
+                            src="./img/Series Populares/heart.jpg" alt="Capa da Série Heartstopper"></a></div>
                 <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                            src="./img/guliver.jpg" alt=""></a></div>
+                            src="./img/Series Populares/lucifer.jpg" alt="Capa da Série Lucifer"></a></div>
                 <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                            src="./img/infiltrado.jpg" alt=""></a></div>
+                            src="./img/Series Populares/Pretty.jpg" alt="Capa da Série Pretty Little L"></a></div>
                 <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                            src="./img/ondasdafe.jpg" alt=""></a></div>
+                            src="./img/Series Populares/riverdale.jpg" alt="Capa da Série Riverdale"></a></div>
                 <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                            src="./img/profecia.jpg" alt=""></a></div>
+                            src="./img/Series Populares/stranger_T.jpg" alt="Capa da Série Stranger Things"></a></div>
                 <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                            src="./img/terrifier2.jpg" alt=""></a></div>
+                            src="./img/Series Populares/tlou.jpg" alt="Capara da Série TLOU"></a></div>
                 <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                            src="./img/veneza.jpg" alt=""></a></div>
+                            src="./img/Series Populares/wandinha.jpg" alt="Capa da Série wANDINHA"></a></div>
             </div>
         </div>
 
@@ -120,21 +127,21 @@
             <h1 id="acao">Ação</h1>
             <div class="container-de-capas">
                 <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                            src="./img/D&D.jpg" alt="Capa do filme Dungeons & Dragons"></a></div>
+                            src="./img/Action/alerta_v.jpg" alt="Capa do filme Alerta Vermelho"></a></div>
                 <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                            src="./img/euacredito.jpg" alt="Capa do filme Eu Acredito"></a></div>
+                            src="./img/Action/batman.jpg" alt="Capa do filme Batman"></a></div>
                 <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                            src="./img/guliver.jpg" alt=""></a></div>
+                            src="./img/Action/desejo_dm.jpg" alt="Capa do filme Desejo de Matar"></a></div>
                 <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                            src="./img/infiltrado.jpg" alt=""></a></div>
+                            src="./img/Action/exterminador_df.jpg" alt="Capa do filme Exterminador do Futuro"></a></div>
                 <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                            src="./img/ondasdafe.jpg" alt=""></a></div>
+                            src="./img/Action/implacavel.jpg" alt="Capa do filme Implacável"></a></div>
                 <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                            src="./img/profecia.jpg" alt=""></a></div>
+                            src="./img/Action/kate.jpg" alt="Capa do filme Kate"></a></div>
                 <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                            src="./img/terrifier2.jpg" alt=""></a></div>
+                            src="./img/Action/vinganca.jpg" alt="Capa do filme Vingança"></a></div>
                 <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                            src="./img/veneza.jpg" alt=""></a></div>
+                            src="./img/Action/viuva_negra.jpeg" alt="Capa do filme Viúva Negra"></a></div>
             </div>
         </div>
 
@@ -142,21 +149,21 @@
             <h1 id="terror">Terror</h1>
             <div class="container-de-capas">
                 <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                            src="./img/D&D.jpg" alt="Capa do filme Dungeons & Dragons"></a></div>
+                            src="./img/Terror/a_classic_horror.jpg" alt="Capa do filme Terror Classico"></a></div>
                 <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                            src="./img/euacredito.jpg" alt="Capa do filme Eu Acredito"></a></div>
+                            src="./img/Terror/a_entidade.jpg" alt="Capa do filme A Entidade"></a></div>
                 <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                            src="./img/guliver.jpg" alt=""></a></div>
+                            src="./img/Terror/boneco_do_mal_2.jpg" alt="Capa do filme Boneco do mal 2"></a></div>
                 <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                            src="./img/infiltrado.jpg" alt=""></a></div>
+                            src="./img/Terror/chamado.jpg" alt="Capa do filme O Chamado"></a></div>
                 <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                            src="./img/ondasdafe.jpg" alt=""></a></div>
+                            src="./img/Terror/tricks.jpeg" alt="Capa do filme Tricks"></a></div>
                 <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                            src="./img/profecia.jpg" alt=""></a></div>
+                            src="./img/Terror/morte_do_demo.jpg" alt="Capa do filme A morte do Demonio"></a></div>
+                <div class="filme"><a href="./img/Terror/o_caseiro.jpg" target="_blank" rel="noopener noreferrer"><img
+                            src="./img/Terror/o_caseiro.jpg" alt="Capa do filme O caseiro"></a></div>
                 <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                            src="./img/terrifier2.jpg" alt=""></a></div>
-                <div class="filme"><a href="watching.html" target="_blank" rel="noopener noreferrer"><img
-                            src="./img/veneza.jpg" alt=""></a></div>
+                            src="./img/Terror/winneie_the_pooh.jpg" alt="Capa do filme Winneie the pooh"></a></div>
             </div>
         </div>
 

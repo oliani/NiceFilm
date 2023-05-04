@@ -14,33 +14,54 @@ body {
     background-color: black;
 }
 
-.allHeader {
-    display: flex;
-
+.back-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
 }
 
+@media (min-aspect-ratio: 16/9){
+    .back-video{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9){
+    .back-video{
+        width: auto;
+        height: 100%;
+    }
+}
+
+
 #siteLogo {
+    float: left;
     position: absolute;
     width: 200px;
-    margin: 10px 0vw 0vw 35px;
+    margin: -75px 0vw 0vw 35px;
+    z-index: 1;
 }
 
 .menu {
-    margin: 50px 0px 0px 250px;
-    list-style: none;
     float: left;
+    position: absolute;
+    margin: -40px 0px 0px 250px;
+    list-style: none;
+    
 }
 
 .menu li {
-    position: relative;
     float: left;
-    font-size: 30px;
-    padding: 10px;
+    width: 135px;
+    font-family: 'Sigmar', cursive;
+    font-size: 15px;
+    text-shadow: 2px 2px #000000;
     
 }
 
 .menu li a {
-    
     padding: 5px 10px;
     display: block;
 }
@@ -52,55 +73,60 @@ body {
 
 .menu li ul {
     position: absolute;
-    top: 55px;
+    top: 30px;
     left: 0;
     display: none;
     
 }
 
-.menu li:hover ul,
-.menu li.over ul {
-    display: flex;
-
+#active{
+    color: yellow;
 }
 
+.menu li:hover ul,
+.menu li.over ul {
+    display: block;
+
+}
 
 .menu li ul li {
     display: block;
     width: 120px;
 }
 
-
-#trailerMovie {
-    margin-top: -6vw;
-    height: 80%;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: 0;
-    background-color: black;
+#blank{
+    float: left;
+    width: 100%;
+    height: 23.5vw;
 }
 
+
 .videoInfo {
+    float: left;
     font-family: 'Bebas Neue', cursive;
     font-size: 20px;
-    margin: -20% 0 0 5%;
-    background-color: rgb(0, 0, 0);
-    color: #000000;
-    width: 80%;
-    padding: 20px;
-    background-color: black;
+    background-color: rgba(0, 0, 0,0);
+    width: 100%;
+    height: 300px;
+    min-height: 250px;
+    overflow:hidden;
+    margin: 20px 10px 0px 0;
 
+}
+
+.videoInfo h1{
+    margin-left: 7%;
 }
 
 .videoInfo p {
     width: 60%;
     font-size: 20px;
     padding-left: 7px;
-    background-color: rgb(0, 0, 0);
+    margin-left: 7%;
 }
 
 #pauseButton {
-    margin: 20px 10px 0px 0px;
+    margin: 1% 10px 0 7%;
     width: 50px;
     height: 50px;
     font-size: 25px;
@@ -131,17 +157,29 @@ body {
 }
 
 #watchNow:hover {
-    float: left;
     background-color: white;
 }
 
-#estrutura {
-    margin-top: 120px;
+#degrade{
+    float: left;
+    height: 150px;
+    width: 100%;
+    min-height: 100%;
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgb(0, 0, 0));
 }
 
+#estrutura{
+    margin-top: 80px;
+    width: 100%;
+    background-color: #000000;
+    z-index: 10;
+}
 .sessao-de-itens {
-    width: 98%;
+    float: left;
+    width: 100%;
     height: 24.5vw;
+    background-color: #000000;
+    overflow: hidden;
 }
 
 .sessao-de-itens h1 {
@@ -151,19 +189,18 @@ body {
     z-index: 3;
 }
 
-
-
 .container-de-capas {
     padding: 0 0 30px 2%;
     float: left;
     width: 100%;
+    
 }
 
 .filme img {
     float: left;
-    height: 50%;
-    width: 12%;
-    padding: 0;
+    width:  12vw;
+    height: 20vw;
+    background-size: cover;
 
 }
 
@@ -184,7 +221,6 @@ body {
     display: block;
     float: left;
     font-size: 15px;
-    margin-left: -1%;
     padding-bottom: 2%;
 
 }
