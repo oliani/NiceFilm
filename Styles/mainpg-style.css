@@ -211,11 +211,6 @@ body {
     border-radius: 5px;
 }
 
-#bottomLogo {
-    float: left;
-    width: 550px;
-    padding: 10px 20px 20px 2%;
-}
 
 .bottomMenu {
     font-family: 'Bebas Neue', cursive;
@@ -223,5 +218,31 @@ body {
     float: left;
     font-size: 15px;
     padding-bottom: 2%;
+
+}
+
+.footer{
+    float: left;
+    width: 94.84374%;
+    height: 90px;
+    padding: 50px;
+    border-top: 5px solid yellow;
+    overflow: hidden;
+}
+.footer img{
+    float: left;
+    width: 150px;
+    margin-left: 45px;
+}
+
+.footer p{
+    float: left;
+    padding: 25px 0px 0px 50px;
+}
+
+.footer-cols ul{
+    float: left;
+    text-decoration: none;
+    padding-left: 7%;
 
 }
