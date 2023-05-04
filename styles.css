@@ -40,14 +40,14 @@ body {
     float: left;
     position: absolute;
     width: 200px;
-    margin: -3.7% 0vw 0vw 35px;
+    margin: -60px 0vw 0vw 35px;
     z-index: 1;
 }
 
 .menu {
     float: left;
     position: absolute;
-    margin: -2.5% 0px 0px 250px;
+    margin: -35px 0px 0px 250px;
     list-style: none;
     min-width: 700px;
     
