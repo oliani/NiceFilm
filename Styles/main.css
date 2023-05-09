@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+}
+
+body {
+    background-color: black;
+    overflow-x: hidden;
+    font-weight: 400;
+}
+
+h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 50px;
+}
+
+
+#back-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .back-video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .back-video {
+        width: auto;
+        height: 100%;
+    }
+}
+
+
+nav {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    height: 100px;
+    z-index: 999;
+    top: 0;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+#siteLogo {
+    /* float: left; */
+    /* position: absolute; */
+    width: 200px;
+    /* margin: -60px 0vw 0vw 35px; */
+    z-index: 1;
+}
+
+.menu {
+    /* float: left; */
+    /* position: absolute; */
+    /* margin: -35px 0px 0px 250px; */
+    list-style: none;
+    /* min-width: 700px; */
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.menu li {
+    /* float: left; */
+    /* width: 135px; */
+    font-family: 'Sigmar', sans-serif;
+    font-size: 15px;
+    text-shadow: 2px 2px #000000;
+
+}
+
+.menu li a {
+    padding: 5px 10px;
+    display: block;
+}
+
+.menu li a:hover {
+    color: yellow;
+    font-weight: bolder;
+}
+
+.menu li ul {
+    position: absolute;
+    padding: 0;
+    /* top: 30px; */
+    /* left: 0; */
+    display: none;
+}
+
+#active {
+    color: yellow;
+}
+
+.menu li:hover ul,
+.menu li.over ul {
+    display: block;
+
+}
+
+.menu li ul li {
+    display: block;
+    width: 120px;
+}
+
+header {
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#blank {
+    float: left;
+    width: 100%;
+    height: 23.5vw;
+}
+
+
+.videoInfo {
+    /* float: left; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 40%);
+    width: 100%;
+    /* height: 300px; */
+    min-height: 250px;
+    overflow: hidden;
+    margin: 20px 10px 0px 0;
+    text-shadow: 2px 2px #000000;
+    padding-bottom: 80px;
+}
+
+.videoInfo h1 {
+    margin-left: 7%;
+}
+
+.videoInfo p {
+    width: 60%;
+    font-size: 20px;
+    margin-left: 7%;
+    text-shadow: 2px 2px #000000;
+}
+
+#pauseButton {
+    margin: 1% 10px 10px 7%;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    padding: 5px 10px 10px 10px;
+    border: none;
+    border-radius: 50px;
+    background: yellow;
+    color: black;
+    cursor: pointer;
+}
+
+#pauseButton:hover {
+    background-color: white;
+}
+
+#watchNow {
+    width: 250px;
+    height: 50px;
+    font-size: 25px;
+    padding: 5px 10px 10px 10px;
+    border: none;
+    border-radius: 50px;
+    background: yellow;
+    color: black;
+    cursor: pointer;
+
+    z-index: 4;
+}
+
+#watchNow:hover {
+    background-color: white;
+}
+
+#degrade {
+    float: left;
+    height: 150px;
+    width: 100%;
+    min-height: 100px;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0, 0));
+}
+
+#estrutura {
+    margin-top: 80px;
+    width: 100%;
+    background-color: #000000;
+    z-index: 10;
+}
+
+.sessao-de-itens {
+    float: left;
+    width: 100%;
+    height: 24.5vw;
+    background-color: #000000;
+    overflow: hidden;
+}
+
+.sessao-de-itens h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 50px;
+    padding-left: 2%;
+    z-index: 3;
+}
+
+.container-de-capas {
+    padding: 0 0 30px 2%;
+    float: left;
+    width: 100%;
+
+}
+
+.filme img {
+    float: left;
+    width: 12vw;
+    height: 20vw;
+    background-size: cover;
+
+}
+
+.filme a img:hover {
+    width: 13%;
+    border: 3px solid yellow;
+    border-radius: 5px;
+}
+
+
+.bottomMenu {
+    font-family: 'Bebas Neue', sans-serif;
+    display: block;
+    float: left;
+    font-size: 15px;
+    padding-bottom: 2%;
+
+}
+
+.footer {
+    float: left;
+    width: 94.84374%;
+    height: 90px;
+    padding: 50px;
+    border-top: 5px solid yellow;
+    overflow: hidden;
+}
+
+.footer img {
+    float: left;
+    width: 150px;
+    margin-left: 45px;
+}
+
+.footer p {
+    float: left;
+    padding: 25px 0px 0px 50px;
+}
+
+.footer-cols ul {
+    float: left;
+    text-decoration: none;
+    padding-left: 7%;
+
+}
