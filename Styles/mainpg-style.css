@@ -14,7 +14,7 @@ body {
     background-color: black;
 }
 
-.back-video {
+#back-video {
     position: absolute;
     right: 0;
     bottom: 0;
